@@ -4,7 +4,6 @@ public enum TipoPokemon
 {
     FUEGO,
     AGUA,
-    PLANTA,
     VENENO,
     ELECTRICO,
     PSIQUICO,
@@ -32,16 +31,7 @@ public enum TipoPokemon
                     case PSIQUICO:return 1.0;
                     case LUCHA: return 1.0; 
                 }
-            case PLANTA:
-                switch (defensor) {
-                    case FUEGO: return 0.5; 
-                    case AGUA: return 2.0; 
-                    case PLANTA: return 1.0; 
-                    case ELECTRICO: return 1.0; 
-                    case VENENO: return 0.5;
-                    case PSIQUICO:return 1.0;
-                    case LUCHA: return 1.0;
-                }
+
             case VENENO:
                 switch (defensor) {
                     case FUEGO: return 1.0; 
@@ -85,5 +75,7 @@ public enum TipoPokemon
                     case LUCHA: return 1.0;
        
     }
+                
+                
      return 1.0; 
 }

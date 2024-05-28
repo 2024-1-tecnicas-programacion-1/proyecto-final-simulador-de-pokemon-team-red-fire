@@ -2,14 +2,6 @@ package simulador.pokemon;
 
 public abstract class Pokemon {
 
-    public EstadoPokemon getEstado() {
-        return estado;
-    }
-
-    public void setEstado(EstadoPokemon estado) {
-        this.estado = estado;
-    }
-
 private String nombrePokemon;
 private int saludPokemon;
 private int puntosDeAtaque;
@@ -22,7 +14,48 @@ this.saludPokemon=saludPokemon;
 this.puntosDeAtaque=puntosDeAtaque;
 this.tipoPokemon=tipoPokemon;
 this.estado=EstadoPokemon.NORMAL;
+
 }
+
+    public String getNombrePokemon() {
+        return nombrePokemon;
+    }
+
+    public void setNombrePokemon(String nombrePokemon) {
+        this.nombrePokemon = nombrePokemon;
+    }
+
+    public int getSaludPokemon() {
+        return saludPokemon;
+    }
+
+    public void setSaludPokemon(int saludPokemon) {
+        this.saludPokemon = saludPokemon;
+    }
+
+    public int getPuntosDeAtaque() {
+        return puntosDeAtaque;
+    }
+
+    public void setPuntosDeAtaque(int puntosDeAtaque) {
+        this.puntosDeAtaque = puntosDeAtaque;
+    }
+
+    public int getTipoPokemon() {
+        return tipoPokemon;
+    }
+
+    public void setTipoPokemon(int tipoPokemon) {
+        this.tipoPokemon = tipoPokemon;
+    }
+
+    public EstadoPokemon getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoPokemon estado) {
+        this.estado = estado;
+    }
  // Método para realizar un ataque al oponente
     public abstract void atacar(Pokemon oponente);
 
@@ -47,4 +80,5 @@ this.estado=EstadoPokemon.NORMAL;
 enum EstadoPokemon {
     NORMAL,
     DEBILITADO
+
 }

@@ -2,6 +2,7 @@ package simulador.entrenador;
 
 import java.util.ArrayList;
 import java.util.List;
+import simulador.pokemon.Pokemon;
 
 public class Entrenador {
     // Propiedades
@@ -13,7 +14,11 @@ public class Entrenador {
         this.nombre = nombre;
         this.pokemones = new ArrayList<>();
     }
-
+    public String getNombrePokemon(String nombrePokemon){
+    
+        return nombrePokemon;
+    
+    }
     // Método para agregar un Pokémon al equipo del entrenador
     public void agregarPokemon(Pokemon pokemon) {
         pokemones.add(pokemon);
@@ -28,7 +33,7 @@ public class Entrenador {
     public void mostrarPokemones() {
         System.out.println("Pokemones de " + nombre + ":");
         for (Pokemon pokemon : pokemones) {
-            System.out.println("- " + pokemon.nombre);
+            System.out.println("- " + nombrePokemon);
         }
     }
 

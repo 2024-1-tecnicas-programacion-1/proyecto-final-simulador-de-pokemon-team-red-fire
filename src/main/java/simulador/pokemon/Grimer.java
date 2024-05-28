@@ -1,9 +1,10 @@
+
 package simulador.pokemon;
 
-// Clase Charmander
-public class Charmander extends Pokemon {
-    public Charmander(String nombre, int salud, int puntosDeAtaque, EstadoPokemon estado) {
-        super(nombre, 39, 51, 1, estado); // Tipo Fuego
+
+public class Grimer extends Pokemon {
+    public Grimer(String nombre, int salud, int puntosDeAtaque, EstadoPokemon estado) {
+        super(nombre, 80, 80, 3, estado); // Tipo Fuego
     }
 
     @Override
