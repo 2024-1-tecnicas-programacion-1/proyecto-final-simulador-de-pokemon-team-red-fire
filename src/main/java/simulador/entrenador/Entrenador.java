@@ -14,36 +14,44 @@ public class Entrenador {
         this.nombre = nombre;
         this.pokemones = new ArrayList<>();
     }
-    public String getNombrePokemon(String nombrePokemon){
-    
-        return nombrePokemon;
-    
+
+    public List<Pokemon> getPokemones() {
+        return pokemones;
     }
-    // Método para agregar un Pokémon al equipo del entrenador
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+  
+
     public void agregarPokemon(Pokemon pokemon) {
         pokemones.add(pokemon);
     }
 
-    // Método para entrenar a un Pokémon y mejorar sus estadísticas
+    
     public void entrenarPokemon(Pokemon pokemon) {
         pokemon.entrenar();
     }
 
-    // Método para mostrar los Pokémones actuales del entrenador
+    
     public void mostrarPokemones() {
         System.out.println("Pokemones de " + nombre + ":");
         for (Pokemon pokemon : pokemones) {
-            System.out.println("- " + nombrePokemon);
+            System.out.println("- " + pokemon.getNombrePokemon());
         }
     }
 
-    // Método para seleccionar un Pokémon de su equipo para participar en una batalla
+    
     public Pokemon prepararBatalla() {
         if (pokemones.isEmpty()) {
             System.out.println("No hay pokemones disponibles para la batalla.");
             return null;
         }
-        // Por simplicidad, seleccionaremos el primer Pokémon del equipo para la batalla
+        
         return pokemones.get(0);
     }
 }
